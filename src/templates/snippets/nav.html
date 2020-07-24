@@ -1,0 +1,72 @@
+<!-- Navigation Bar Section -->
+<!-- <nav>
+    <div class="logo">
+        <h4>The Nav</h4>
+    </div>
+    <div class="mob-nav">
+        <i class="fa fa-bars menu" aria-hidden="true"></i>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#VM">Vision & Mission</a></li>
+        <li><a href="#about">About US</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav> -->
+<!-- Navigation bar section End -->
+
+<!-- above this is the old nav bar that I have commented out -->
+
+
+
+<!-- new nav bar -->
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">
+        {% if request.user.is_authenticated %}
+        <p>Hello, {{request.user.username}}</p>
+        {% endif %}
+    </h5>
+    <nav class="my-2 my-md-0 mr-md-3 color">
+        {% if request.user.is_authenticated %}
+                <a class="p-2 text-dark" href="{% url 'home' %}">Home</a>
+                <a class="p-2 text-dark" href="#VM">Vision & Mission</a> 
+                <a class="p-2 text-dark" href="#about">About Us</a> 
+                <a class="p-2 text-dark" href="#contact">Contact</a>
+                <a class="p-2 text-dark" href="{% url 'blogs' %}">Blog</a> 
+                <a class="p-2 text-dark" href="{% url 'account' %}">Account</a> 
+                <a class="p-2 text-dark" href="{% url 'logout' %}">Logout</a>
+        {% else %}
+                <a href="{% url 'home' %}">Home</a>
+                <a href="#VM">Vision & Mission</a> 
+                <a href="#about">About Us</a> 
+                <a href="#contact">Contact</a> 
+                <a href="{% url 'login' %}">Login</a>
+                <a class="btn btn-outline-primary" href="{% url 'register' %}">Register</a> 
+        {% endif %}
+    </nav>
+</div>
+<!-- end new nav bar -->
+
+<!-- css for the nav bar -->
+<style type="text/css">
+    @media (min-width: 768px) {
+        html {
+            font-size: 16px;
+        }
+    }
+
+    .container {
+        max-width: 960px;
+    }
+
+    .pricing-header {
+        max-width: 700px;
+    }
+
+    .card-deck .card {
+        min-width: 220px;
+    }
+    .color {
+        color: #70cee4;
+    }
+</style>

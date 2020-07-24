@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta Tags and Titles -->
+        {% include 'snippets/header.html' %}
+        <!-- End Meta -->
+    </head>
+    
+    <body>
+        <!-- Navigation Bar -->
+        {% include 'snippets/nav.html' %}
+        <!-- End Navigation -->
+        
+        <!-- Main Body -->
+        <style type="text/css">
+            .main {
+                min-height: 100vh;
+                height: 100%;
+            }
+        </style>
+        <div class="main">
+            {% block content %}
+            {% endblock content %}
+        </div>
+        <!-- End Body -->
+        <hr>
+        
+        <!-- footer -->
+        {% include 'snippets/footer.html' %}
+        <!-- End footer -->
+
+        <!-- body CSS -->
+        {% include 'snippets/index_css.html' %}
+        <!-- End CSS -->
+    </body>
+</html>
