@@ -188,13 +188,13 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
                 <div class="col-lg-4 segment-two md-mb-30 sm-mb-30">
-                    <h2>The Uplift Foundation</h2>
+                    <h2>Useful Links</h2>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Vision & Mission</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'home' %}#VM">Vision & Mission</a></li>
+                        <li><a href="{% url 'home' %}#about">About</a></li>
+                        <li><a href="{% url 'blogs' %}">Blog</a></li>
+                        <li><a href="{% url 'home' %}#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 segment-three md-mb-30 sm-mb-30">

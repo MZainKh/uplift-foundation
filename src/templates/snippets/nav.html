@@ -21,7 +21,7 @@
 
 <!-- new nav bar -->
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 border-bottom shadow-sm">
-    <img class="mr-4" src="{% static 'tuf_logo.png' %}" alt="The Uplift Foundation Logo" width="85" height="75">
+    <a href="{% url 'home' %}"><img class="mr-4" src="{% static 'tuf_logo.png' %}" alt="The Uplift Foundation Logo" width="85" height="75"></a>
     <h5 class="my-0 mr-md-auto font-weight-normal">
         {% if request.user.is_authenticated %}
         <p>Hello, {{request.user.username}}</p>
