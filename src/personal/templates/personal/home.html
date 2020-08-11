@@ -199,12 +199,134 @@
     </div>
     </section> -->
 
+<section id="team">
+    <div class="container-fluid padding">
+        <div class="row padding">
+            <div class="col-lg-6 team-left">
+                <h2>Our team members</h2>
+                <p style="text-align: left;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente fugiat ea error voluptatum ex minima provident aspernatur architecto, illo ad facilis quo asperiores voluptatem magnam sed obcaecati quis corporis minus! Magnam soluta cum neque vel, dolores enim doloremque! Omnis, facere eaque nihil eligendi ducimus, exercitationem voluptatibus pariatur perspiciatis temporibus non recusandae error praesentium! Mollitia libero ea id laboriosam eaque quos. Possimus accusamus dolorum ex sed quibusdam quisquam odio dolore non! Quibusdam, vel ducimus? Error quia rerum nam vero eaque neque?</p>
+            </div>
+            <div class="col-lg-6">
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="{% static 'khushboo.jpeg' %}">
+                            <h2>khushboo<br><span>Founder</span></h2> 
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{% static 'kavya.jpeg' %}">
+                            <h2>kavya<br><span>member</span></h2> 
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{% static 'sara.jpeg' %}">
+                            <h2>sara<br><span>member</span></h2> 
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{% static 'monisha.jpeg' %}">
+                            <h2>monisha<br><span>member</span></h2> 
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{% static 'mohit.jpeg' %}">
+                            <h2>mohit<br><span>member</span></h2> 
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{% static 'gaurav.jpeg' %}">
+                            <h2>gaurav<br><span>member</span></h2> 
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{% static 'zain.jpg' %}">
+                            <h2>zain<br><span>member</span></h2> 
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{% static 'mohit.jpeg' %}">
+                            <h2>waleed<br><span>member</span></h2> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <!-- Team CSS -->
 <!-- <style type="text/css">
     .padding {
         padding-bottom: 2rem;
     }
 </style> -->
+
+<style type="text/css">
+    .swiper-container {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        margin-top: 10px;
+        /* left: 50%;
+        top: 50%;
+        margin-left: -150px;
+        margin-top: -150px; */
+    }
+
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+    }
+
+    .swiper-slide h2 {
+        color: #fff;
+        text-align: center;
+        background: #009bff;
+        text-transform: uppercase;
+        font-size: 18px;
+        margin-top: 0;
+        padding: 10px 0px;
+        font-weight: 900;
+
+    }
+
+    .swiper-slide h2 span {
+        text-transform: uppercase;
+        font-weight: 100;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .team-left h2 {
+        color: #009bff;
+        text-transform: uppercase;
+        text-align: left;
+        margin-bottom: 30px;
+        font-weight: 900;
+        letter-spacing: 4px;
+    }
+    .padding {
+        padding-bottom: 2rem;
+    }
+</style>
+
+<!-- Team script -->
+<script type="module">
+    import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+
+    const swiper = new Swiper('.swiper-container', {
+        effect: 'cube',
+        grabCursor: true,
+        autoplay: true,
+        cubeEffect: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+        },
+    });
+</script>
+
+
 
 <!-- fourth image -->
 <div class="parallax4"></div>
