@@ -118,9 +118,9 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse navmenu" id="navbarResponsive">
+        <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#VM">Vision & Mission</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'blogs' %}">Blog</a></li>
@@ -154,26 +154,9 @@
     }
 </style>
 
-<script>
-    const menuEl = document.querySelector('.navmenu');
-    const link = document.querySelectorAll('li');
-
-    link.forEach( el => {
-        el.addEventListener('click', () => {
-            menuEl.querySelector('.active').classList.remove('active');
-            el.classList.add('active');
-        });
-    });
-</script>
-
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script>
-    $(window).on('scroll', function(){
-        if ($(window).scrollTop()){
-            $('nav').addClass('black');
-        }
-        else {
-            $('nav').removeClass('black')
-        }
+    $(document).on('click', 'ul li', function(){
+        $(this).addClass('active').siblings().removeClass('active')
     });
 </script>
