@@ -243,6 +243,7 @@
                             <h2>waleed<br><span>member</span></h2> 
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
@@ -291,7 +292,7 @@
         font-weight: 100;
     }
 
-    img {
+    .swiper-slide img {
         width: 100%;
         height: 100%;
     }
@@ -303,6 +304,10 @@
         margin-bottom: 30px;
         font-weight: 900;
         letter-spacing: 4px;
+    }
+    .swiper-pagination {
+        position: relative;
+        margin-top: 30%;
     }
     .padding {
         padding-bottom: 2rem;
@@ -322,6 +327,9 @@
             slideShadows: true,
             shadowOffset: 20,
             shadowScale: 0.94,
+        },
+        pagination: {
+        el: '.swiper-pagination',
         },
     });
 </script>
