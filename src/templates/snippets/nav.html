@@ -114,7 +114,7 @@
 
 <nav class="navbar navbar-light navbar-expand-md bg-light sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home' %}"><img src="#"></a>
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'tuf_logo.png' %}" width="80" height="72"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -163,5 +163,17 @@
             menuEl.querySelector('.active').classList.remove('active');
             el.classList.add('active');
         });
+    });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+    $(window).on('scroll', function(){
+        if ($(window).scrollTop()){
+            $('nav').addClass('black');
+        }
+        else {
+            $('nav').removeClass('black')
+        }
     });
 </script>
