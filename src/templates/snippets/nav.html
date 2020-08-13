@@ -111,32 +111,31 @@
         </ul>
     </div>
 </nav> -->
-<div class="mynav">
-    <nav class="navbar navbar-light navbar-expand-md bg-light sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'tuf_logo.png' %}" width="80" height="72"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#VM">Vision & Mission</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'blogs' %}">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#contact">Contact</a></li>
-                    {% if request.user.is_authenticated %}
-                    <li class="nav-item"><a class="nav-link" href="{% url 'account' %}">Profile</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-primary" href="{% url 'logout' %}">Logout</a></li>
-                    {% else %}
-                    <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
-                    <li class="nav-item"><a class="btn btn-outline-primary" href="{% url 'register' %}">Register</a></li>
-                    {% endif %}
-                </ul>
-            </div>
+
+<nav id="navbar" class="navbar navbar-light navbar-expand-md bg-light fixed-top">
+    <div class="container-fluid">
+        <a id="logo" class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'tuf_logo.png' %}" width="80" height="72"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#VM">Vision & Mission</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'blogs' %}">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#contact">Contact</a></li>
+                {% if request.user.is_authenticated %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'account' %}">Profile</a></li>
+                <li class="nav-item"><a class="btn btn-outline-primary" href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+                <li class="nav-item"><a class="btn btn-outline-primary" href="{% url 'register' %}">Register</a></li>
+                {% endif %}
+            </ul>
         </div>
-    </nav>
-</div>
+    </div>
+</nav>
 
 <!-- navbar CSS -->
 <style type="text/css">
@@ -163,3 +162,20 @@
 </style>
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("navbar").style.padding = "4px 10px";
+            document.getElementById("logo").style.width = "25px";
+            document.getElementById("logo").style.height = "25px";
+        } 
+        else {
+            document.getElementById("navbar").style.padding = "20px 10px";
+            document.getElementById("logo").style.width = "35px";
+            document.getElementById("logo").style.height = "35px";
+            document.getElementById("logo").style.marginBottom = "35px";
+        }
+    }
+</script>
