@@ -29,7 +29,9 @@
             </div>
         </div>
     </div>
-    <p class="footer-bottom-text">Copyright &copy; The Uplift Foundation 2020. All rights reserved.</p>
+    <div class="footer-bottom-text">
+        <p>Copyright &copy; The Uplift Foundation 2020. All rights reserved.</p>
+    </div>
 </footer>
 <!-- "col-md-3 col-sm-6 col-xs-12 segment-two md-mb-30 sm-mb-30" -->
 <!-- New footer CSS -->
@@ -82,22 +84,27 @@
     }
     .segment-three a {
         background: #F8878f;
-        /* background: #494848; */
         width: 30px;
         height: 30px;
         display: inline-block;
         border-radius: 50%;  
     }
+    .segment-three a:hover {
+        background: #70cee4;
+    }
     .segment-three a i {
         font-size: 15px;
-        color: #fff;
+        color: #faf3e3;
         padding: 8px 9px;
     }
-    .footer-bottom-text {
+    .footer-bottom-text p {
         text-align: center;
-        background: #965786;
         line-height: 70px;
         margin: 0;
+        color: #fff;
+    }
+    .footer-bottom-text {
+        background: #965786;
     }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
         .md-mb-30 {
