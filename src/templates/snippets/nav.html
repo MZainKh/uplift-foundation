@@ -8,17 +8,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#VM">Vision & Mission</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'blogs' %}">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'home' %}#contact">Contact</a></li>
+                <li id="navbtn" class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                <li id="navbtn" class="nav-item"><a class="nav-link" href="{% url 'home' %}#VM">Vision & Mission</a></li>
+                <li id="navbtn" class="nav-item"><a class="nav-link" href="{% url 'home' %}#about">About</a></li>
+                <li id="navbtn" class="nav-item"><a class="nav-link" href="{% url 'blogs' %}">Blog</a></li>
+                <li id="navbtn" class="nav-item"><a class="nav-link" href="{% url 'home' %}#contact">Contact</a></li>
                 {% if request.user.is_authenticated %}
-                <li class="nav-item"><a class="nav-link" href="{% url 'account' %}">Profile</a></li>
-                <li class="nav-item"><a class="btn btn-outline-primary" href="{% url 'logout' %}">Logout</a></li>
+                <li id="navbtn" class="nav-item"><a class="nav-link" href="{% url 'account' %}">Profile</a></li>
+                <li id="navbtn" class="nav-item"><a class="btn btn-outline-primary" href="{% url 'logout' %}">Logout</a></li>
                 {% else %}
-                <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
-                <li class="nav-item"><a class="btn btn-outline-primary" href="{% url 'register' %}">Register</a></li>
+                <li id="navbtn" class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+                <li id="navbtn" class="nav-item"><a class="btn btn-outline-primary" href="{% url 'register' %}">Register</a></li>
                 {% endif %}
             </ul>
         </div>
