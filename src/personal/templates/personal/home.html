@@ -257,11 +257,6 @@
 
 
 <!-- Team CSS -->
-<!-- <style type="text/css">
-    .padding {
-        padding-bottom: 2rem;
-    }
-</style> -->
 
 <style type="text/css">
     .swiper-container {
@@ -269,10 +264,6 @@
         height: 300px;
         position: relative;
         margin-top: 10px;
-        /* left: 50%;
-        top: 50%;
-        margin-left: -150px;
-        margin-top: -150px; */
     }
 
     .swiper-slide {
@@ -339,4 +330,64 @@
     });
 </script>
 
+<section id="contact">
+    <div class="container-fluid padding">
+        <div class="row padding text-center">
+            <div class="col-12">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="col-12 social padding">
+                <a href="https://www.facebook.com/uplift.ae/"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/TheUpliftFound1"><i class="fa fa-twitter"></i></a>
+                <a href="https://instagram.com/the.uplift.foundation"><i class="fa fa-instagram"></i></a>
+                <a href="mailto: upliftfoundation.ae@gmail.com?"><i class="fa fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/the-uplift-foundation-a624761ab"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Us CSS -->
+<style type="text/css">
+    .social a {
+        font-size: 4.5em;
+        padding: 3rem;
+    }
+    .fa-facebook {
+        color: #3b5998;
+    }
+    .fa-twitter {
+        color: #00aced;
+    }
+    .fa-linkedin {
+        color: #2867b2;
+    }
+    .fa-instagram {
+        color: #d6249f;
+    }
+    .fa-envelope {
+        color: #f1d592;
+    }
+    .fa-facebook:hover, .fa-instagram:hover, .fa-linkedin:hover, .fa-twitter:hover, .fa-envelope:hover {
+        color: #d5d5d5;
+    }
+    @media (max-width: 992px) {
+        .social a {
+            font-size: 4em;
+            padding: 2rem;
+        }
+    }
+    @media (max-width: 768px) {
+        .social a {
+            font-size: 2.5em;
+            padding: 1.2rem;
+        }
+    }
+    @media (max-width: 576px) {
+        .social a {
+            font-size: 2em;
+            padding: .7rem;
+        }
+    }
+</style>
 {% endblock content %}
