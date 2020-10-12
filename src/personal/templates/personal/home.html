@@ -100,7 +100,7 @@
 
 <!-- Vision and Mission section -->
 <section id="VM">
-    <h1 class="display-3">Vision & Mission</h1>
+    <h1 class="display-3 mt-5">Vision & Mission</h1>
     <h4 class="display-4">A Distinct Identity</h4>
     <div class="two-col">
         <p class="lead"> Boost youth involvement in social initiatives, let youth take charge and cater to the society The Uplift Foundation calls for restoring, recreating and reinventing the perception of the good in people, molding them into socially aware, responsible and compassionate adults </p>
@@ -144,7 +144,7 @@
 
 <!-- About Us section -->
 <section class="dark" id="about">
-    <h2>Who We Are</h2>
+    <h2 class="mt-5">Who We Are</h2>
     <p> The Uplift Foundation knows that our strength lies not only in the words we stand by, but most importantly through the actions of our initiatives. Our Non-Profit Organization realized that by working together we could overcome our challenges much more efficiently, and that is why we ultimately decided to launch the Uplift Foundation.</p>
 </section>
 <!-- About Us End -->
@@ -236,7 +236,7 @@
                             <h2>gaurav<br><span>member</span></h2> 
                         </div>
                         <div class="swiper-slide">
-                            <img src="{% static 'c_zain.jpg' %}">
+                            <img src="{% static 'zain.png' %}">
                             <h2>zain<br><span>member</span></h2> 
                         </div>
                         <div class="swiper-slide">
@@ -334,7 +334,7 @@
     <div class="container-fluid padding">
         <div class="row padding text-center">
             <div class="col-12">
-                <h2>Contact Us</h2>
+                <h2 class="mt-5">Contact Us</h2>
             </div>
             <div class="col-12 social padding">
                 <a href="https://www.facebook.com/uplift.ae/"><i class="fa fa-facebook"></i></a>
@@ -390,4 +390,8 @@
         }
     }
 </style>
+
+<script type="text/javascript">
+    $('section').localScroll();
+</script>
 {% endblock content %}
